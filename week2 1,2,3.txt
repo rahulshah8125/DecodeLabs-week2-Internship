@@ -1,0 +1,280 @@
+DECODELABS WEEK2 TASKS OUTPUTS:
+
+==================================================
+TASK 1: DATASET UNDERSTANDING
+==================================================
+
+1. Dataset Size
+Rows and Columns: (1500, 19)
+
+2. Column Names
+Date
+Region
+Product
+Quantity
+UnitPrice
+StoreLocation
+CustomerType
+Discount
+Salesperson
+TotalPrice
+PaymentMethod
+Promotion
+Returned
+OrderID
+CustomerName
+ShippingCost
+OrderDate
+DeliveryDate
+RegionManager
+
+3. Data Types
+Date             datetime64[us]
+Region                      str
+Product                     str
+Quantity                  int64
+UnitPrice               float64
+StoreLocation               str
+CustomerType                str
+Discount                float64
+Salesperson                 str
+TotalPrice              float64
+PaymentMethod               str
+Promotion                   str
+Returned                  int64
+OrderID                     str
+CustomerName                str
+ShippingCost            float64
+OrderDate        datetime64[us]
+DeliveryDate     datetime64[us]
+RegionManager               str
+dtype: object
+
+4. Dataset Information
+<class 'pandas.DataFrame'>
+RangeIndex: 1500 entries, 0 to 1499
+Data columns (total 19 columns):
+ #   Column         Non-Null Count  Dtype         
+---  ------         --------------  -----         
+ 0   Date           1500 non-null   datetime64[us]
+ 1   Region         1500 non-null   str           
+ 2   Product        1500 non-null   str           
+ 3   Quantity       1500 non-null   int64         
+ 4   UnitPrice      1500 non-null   float64       
+ 5   StoreLocation  1500 non-null   str           
+ 6   CustomerType   1500 non-null   str           
+ 7   Discount       1500 non-null   float64       
+ 8   Salesperson    1500 non-null   str           
+ 9   TotalPrice     1500 non-null   float64       
+ 10  PaymentMethod  1500 non-null   str           
+ 11  Promotion      1130 non-null   str           
+ 12  Returned       1500 non-null   int64         
+ 13  OrderID        1500 non-null   str           
+ 14  CustomerName   1500 non-null   str           
+ 15  ShippingCost   1500 non-null   float64       
+ 16  OrderDate      1500 non-null   datetime64[us]
+ 17  DeliveryDate   1500 non-null   datetime64[us]
+ 18  RegionManager  1500 non-null   str           
+dtypes: datetime64[us](3), float64(4), int64(2), str(10)
+memory usage: 222.8 KB
+
+5. Missing Values
+Date               0
+Region             0
+Product            0
+Quantity           0
+UnitPrice          0
+StoreLocation      0
+CustomerType       0
+Discount           0
+Salesperson        0
+TotalPrice         0
+PaymentMethod      0
+Promotion        370
+Returned           0
+OrderID            0
+CustomerName       0
+ShippingCost       0
+OrderDate          0
+DeliveryDate       0
+RegionManager      0
+dtype: int64
+
+6. Duplicate Rows
+Duplicate Rows: 0
+
+7. Statistical Summary
+                              Date  ... RegionManager
+count                         1500  ...          1500
+unique                         NaN  ...             5
+top                            NaN  ...          Eric
+freq                           NaN  ...           311
+mean    2024-04-07 21:35:02.400000  ...           NaN
+min            2023-01-01 00:00:00  ...           NaN
+25%            2023-08-20 00:00:00  ...           NaN
+50%            2024-04-08 12:00:00  ...           NaN
+75%            2024-12-07 06:00:00  ...           NaN
+max            2025-06-30 00:00:00  ...           NaN
+std                            NaN  ...           NaN
+
+[11 rows x 19 columns]
+
+8. Complete Dataset
+           Date   Region  Product  ...  OrderDate  DeliveryDate RegionManager
+0    2023-02-23     East   Laptop  ... 2023-02-23    2023-02-27          Eric
+1    2024-12-19    South    Phone  ... 2024-12-19    2024-12-28        Sophie
+2    2023-05-10    North     Desk  ... 2023-05-10    2023-05-19          Ryan
+3    2025-02-26  Central    Chair  ... 2025-02-26    2025-03-02       Cameron
+4    2023-06-24     East     Desk  ... 2023-06-24    2023-06-27          Eric
+...         ...      ...      ...  ...        ...           ...           ...
+1495 2025-02-17     West     Desk  ... 2025-02-17    2025-02-22         Wendy
+1496 2024-01-11    South    Chair  ... 2024-01-11    2024-01-17        Sophie
+1497 2024-07-27     East     Desk  ... 2024-07-27    2024-08-03          Eric
+1498 2024-12-03  Central  Monitor  ... 2024-12-03    2024-12-10       Cameron
+1499 2025-05-09     West    Chair  ... 2025-05-09    2025-05-13         Wendy
+
+[1500 rows x 19 columns]
+
+Dataset Understanding Completed Successfully!
+
+==================================================
+TASK 2 : DATA CLEANING & PREPROCESSING
+==================================================
+
+Dataset Shape Before Cleaning:
+(1500, 19)
+
+Missing Values Before Cleaning:
+Date               0
+Region             0
+Product            0
+Quantity           0
+UnitPrice          0
+StoreLocation      0
+CustomerType       0
+Discount           0
+Salesperson        0
+TotalPrice         0
+PaymentMethod      0
+Promotion        370
+Returned           0
+OrderID            0
+CustomerName       0
+ShippingCost       0
+OrderDate          0
+DeliveryDate       0
+RegionManager      0
+dtype: int64
+
+Duplicate Rows Before Cleaning:
+0
+
+Dataset Shape After Cleaning:
+(1500, 19)
+
+Missing Values After Cleaning:
+Date             0
+Region           0
+Product          0
+Quantity         0
+UnitPrice        0
+StoreLocation    0
+CustomerType     0
+Discount         0
+Salesperson      0
+TotalPrice       0
+PaymentMethod    0
+Promotion        0
+Returned         0
+OrderID          0
+CustomerName     0
+ShippingCost     0
+OrderDate        0
+DeliveryDate     0
+RegionManager    0
+dtype: int64
+
+Duplicate Rows After Cleaning:
+0
+
+Cleaning completed successfully!
+
+==================================================
+TASK 3 : EXPLORATORY DATA ANALYSIS (EDA)
+==================================================
+
+1. Statistical Summary
+                             Date  ...                DeliveryDate
+count                        1500  ...                        1500
+mean   2024-04-07 21:35:02.400000  ...  2024-04-13 22:36:28.800000
+min           2023-01-01 00:00:00  ...         2023-01-08 00:00:00
+25%           2023-08-20 00:00:00  ...         2023-08-25 12:00:00
+50%           2024-04-08 12:00:00  ...         2024-04-15 12:00:00
+75%           2024-12-07 06:00:00  ...         2024-12-13 06:00:00
+max           2025-06-30 00:00:00  ...         2025-07-10 00:00:00
+std                           NaN  ...                         NaN
+
+[8 rows x 9 columns]
+
+2. Total Sales
+4379992.4285
+
+3. Average Order Value
+2919.9949523333335
+
+4. Maximum Order Value
+11077.0
+
+5. Minimum Order Value
+6.969999999999999
+
+6. Sales by Region
+Region
+Central    847153.6845
+East       883633.7180
+North      967957.9800
+South      827768.1870
+West       853478.8590
+Name: TotalPrice, dtype: float64
+
+7. Sales by Product
+Product
+Chair      622589.4780
+Desk       555266.6645
+Laptop     684417.2415
+Monitor    651629.3925
+Phone      497162.8510
+Printer    684387.4155
+Tablet     684539.3855
+Name: TotalPrice, dtype: float64
+
+8. Customer Type Count
+CustomerType
+Wholesale    756
+Retail       744
+Name: count, dtype: int64
+
+9. Payment Method Usage
+PaymentMethod
+Online         323
+Cash           312
+Credit Card    299
+Debit Card     290
+Gift Card      276
+Name: count, dtype: int64
+
+10. Returned Products
+Returned
+0    1128
+1     372
+Name: count, dtype: int64
+
+11. Top 5 Highest Sales Orders
+        OrderID  Product   Region  TotalPrice
+471   REG100471    Phone     West    11077.00
+229   REG100229   Tablet     East    10949.70
+980   REG100980  Printer  Central    10745.60
+1271  REG101271   Tablet  Central    10719.54
+336   REG100336   Laptop     West    10649.50
+
+EDA Completed Successfully!
